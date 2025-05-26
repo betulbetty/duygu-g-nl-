@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Işığım Benim - Terapötik Kart Akışı</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background"></div>
+  <div id="game-container">
+    <div id="app-title" class="app-title pastel">Işığım Benim</div>
+    <div id="startSection" class="card visible">
+      <div class="title pastel">Hoş geldin! 🌸</div>
+      <label>Adınız Soyadınız:
+        <input id="nameInput" type="text" placeholder="Adınızı ve soyadınızı giriniz">
+      </label>
+      <button id="toCardBtn" class="btn-main">Devam et</button>
+    </div>
+    <div id="cardSelectSection" class="card">
+      <div class="title pastel">Bir kart seç:</div>
+      <div class="card-row">
+        <div class="zaman-card" data-card="gecmis">
+          <div class="emoji-card">⏳</div>
+          <div class="card-title">Geçmiş</div>
+        </div>
+        <div class="zaman-card" data-card="simdi">
+          <div class="emoji-card">🌼</div>
+          <div class="card-title">Şimdi</div>
+        </div>
+        <div class="zaman-card" data-card="gelecek">
+          <div class="emoji-card">🌞</div>
+          <div class="card-title">Gelecek</div>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="questionSection">
+      <div id="question"></div>
+      <div id="answerSection">
+        <input id="answerInput" type="text" autocomplete="off"
+          placeholder="Cevabını buraya yaz..." />
+        <button id="submitBtn" class="btn-main">Gönder</button>
+      </div>
+    </div>
+    <div class="card" id="emojiSection">
+      <div class="pastel">Bu duygunu bir emojiyle ifade eder misin?</div>
+      <div id="emojiPicker" class="emoji-row"></div>
+    </div>
+    <div class="card feedback-card" id="motivationSection"><div id="motivationMsg"></div></div>
+    <div class="card feedback-card" id="meditationSection"><div id="meditationMsg"></div></div>
+    <div class="card feedback-card" id="feedbackSection"><div id="feedbackMsg"></div></div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
